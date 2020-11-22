@@ -1,35 +1,4 @@
-# -*- coding: utf-8 -*-
-'''
-##############################
-# Projet Python M2 SISE      #
-# Tanguy, Oumaima, Fabrice   #
-##############################
-'''
-
-# Test de presentation de l'interface
-
-import base64
-import datetime
-import io
-import pandas as pd
-
-import dash
-from dash.dependencies import Input, Output, State
-import dash_core_components as dcc
-import dash_bootstrap_components as dbc
-import dash_html_components as html
-import dash_table
-
-######### This part is for testing only until we can load any dataset #########
-        
-# Chargement des data
-import pandas as pd
-
-
-df = pd.DataFrame()
-X=[]
-y=[]
-
+test
 # Données d'entrée par défaut
 #test_size=0.35
 #C=0.5
