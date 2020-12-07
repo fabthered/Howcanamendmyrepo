@@ -50,6 +50,8 @@ function, use **help(name\_function)**, exemple : **help(Dataset)**.
 **Note: In the following code, *cbank* is the object instanciated by the
 Dataset() function previously shown.**
 
+------------------------------------------------------------------------
+
 ### Analysing the clustering with single variables
 
 Let’s start our analysis by looking at how single variables influence
@@ -201,6 +203,8 @@ Bar graphs can be plotted with the function *plotsizeeff()*.
 
 ![](Tutorial_files/figure-markdown_strict/unnamed-chunk-17-1.png)
 
+------------------------------------------------------------------------
+
 ### Analysing the clustering with multiple variables
 
 Now we want to look at the influence on our clustering of the
@@ -237,6 +241,8 @@ mixed data only, like in our case example.
     ClustCheck::get_FAMD(cbank)
 
 ![](Tutorial_files/figure-markdown_strict/unnamed-chunk-20-1.png)
+
+------------------------------------------------------------------------
 
 ### Evaluation metrics
 
@@ -276,6 +282,8 @@ though. In this cas, the higher the score, the better the clustering.
     ClustCheck::dunn_indexC(cbank)
 
     ## [1] 0.915563
+
+------------------------------------------------------------------------
 
 ### That’s it!
 
