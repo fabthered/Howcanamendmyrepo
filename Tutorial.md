@@ -10,7 +10,7 @@ test the quality of the clustering.
 Installing the package
 ----------------------
 
-    devtools::install_github("adrienPAVOINE/ClustCheck")
+    #devtools::install_github("adrienPAVOINE/ClustCheck")
 
 Tutorial for package usage
 --------------------------
@@ -59,10 +59,10 @@ former.
 
 #### Categorical variables
 
--   Cramer’s V Here, the Cramer’s V values will be computed for the 4
-    categorical variables of our dataset.
+-   Cramer’s V
 
-<!-- -->
+Here, the Cramer’s V values will be computed for the 4 categorical
+variables of our dataset.
 
     ClustCheck::vcramer(cbank)
 
@@ -87,12 +87,12 @@ A bar graph of the values can be plotted with the function
 
 ![](Tutorial_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
--   V-Test The Test values can be computed either against the modes of a
-    categorical variable (i.e. profession) with the function
-    *tvalue\_cat* or against the numerical variables with the function
-    *tvalue\_num()*. We use *tvalue\_cat()* in our example below.
+-   V-Test
 
-<!-- -->
+The Test values can be computed either against the modes of a
+categorical variable (i.e. profession) with the function *tvalue\_cat*
+or against the numerical variables with the function *tvalue\_num()*. We
+use *tvalue\_cat()* in our example below.
 
     ClustCheck::tvalue_cat(cbank, var = BankCustomer$profession)
 
@@ -107,11 +107,10 @@ A bar graph of the values can be plotted with the function
     ##   2  1.0601473
     ##   3  0.1008806
 
--   Phi-value The Phi values can be computed against the modes of a
-    categorical variable (i.e. profession) with the function
-    *phivalue()*.
+-   Phi-value
 
-<!-- -->
+The Phi values can be computed against the modes of a categorical
+variable (i.e. profession) with the function *phivalue()*.
 
     ClustCheck::phivalue(cbank, var = BankCustomer$profession)
 
@@ -127,13 +126,13 @@ Bar graphs can be plotted with the function *plotphi()*.
 
 ![](Tutorial_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
--   Correspondance Analysis The clustering can be analysed through
-    visualisation by plotting the clusters against the modes of a
-    categorical variable (i.e. profession). It shows the frequency of
-    the modes in each cluster as well as a plot of the coordinates of
-    the clusters centers against the modes of the variable.
+-   Correspondance Analysis
 
-<!-- -->
+The clustering can be analysed through visualisation by plotting the
+clusters against the modes of a categorical variable (i.e. profession).
+It shows the frequency of the modes in each cluster as well as a plot of
+the coordinates of the clusters centers against the modes of the
+variable.
 
     ClustCheck::vizAFC(cbank, var = BankCustomer$profession)
 
@@ -143,10 +142,9 @@ Bar graphs can be plotted with the function *plotphi()*.
 
 Lets’s focus now on the numerical variables of our dataset.
 
--   Correlation Correlation ratios can be computed for all numerical
-    variables.
+-   Correlation
 
-<!-- -->
+Correlation ratios can be computed for all numerical variables.
 
     ClustCheck::corr_ratios(cbank)
 
@@ -158,8 +156,10 @@ A bar graph of the ratios can be plotted with the function *plotcorr()*.
     ClustCheck::plotcorr(cbank)
 
 ![](Tutorial_files/figure-markdown_strict/unnamed-chunk-13-1.png) -
-V-Test call Similar to the categorical variables, test values can be
-computed for the numerical variables with the function *tvalue\_num()*.
+V-Test call
+
+Similar to the categorical variables, test values can be computed for
+the numerical variables with the function *tvalue\_num()*.
 
     ClustCheck::tvalue_num(cbank)
 
@@ -178,14 +178,14 @@ A bar graph of the values can be plotted with the function
 
     ## [1] "Error : input var is missing and required for categorical or mixed data."
 
--   Effect size Effect size is another way to measure the strength of
-    the relationship between variables and cluster groups. Cohen’s
-    magnitude description can be used as a useful scale to evaluate this
-    strength. In our example below, we can see the overwhelming
-    influence of revenue in the cluster group 1.
-    <a href="https://en.wikipedia.org/wiki/Effect_size" class="uri">https://en.wikipedia.org/wiki/Effect_size</a>
+-   Effect size
 
-<!-- -->
+Effect size is another way to measure the strength of the relationship
+between variables and cluster groups. Cohen’s magnitude description can
+be used as a useful scale to evaluate this strength. In our example
+below, we can see the overwhelming influence of revenue in the cluster
+group 1.
+<a href="https://en.wikipedia.org/wiki/Effect_size" class="uri">https://en.wikipedia.org/wiki/Effect_size</a>
 
     ClustCheck::effectsize(cbank)
 
@@ -218,16 +218,21 @@ Component Analysis on the categorical variables of the dataset.
     ## [1] 1 2
 
 ![](Tutorial_files/figure-markdown_strict/unnamed-chunk-18-1.png)
-\#\#\#\# Numerical variables The function *get\_PCA()* offers a graphic
-visualisation of a Principal Component Analysis on the numerical
-variables of the dataset.
+
+#### Numerical variables
+
+The function *get\_PCA()* offers a graphic visualisation of a Principal
+Component Analysis on the numerical variables of the dataset.
 
     ClustCheck::get_PCA(cbank)
 
 ![](Tutorial_files/figure-markdown_strict/unnamed-chunk-19-1.png)![](Tutorial_files/figure-markdown_strict/unnamed-chunk-19-2.png)
-\#\#\#\# Mixed variables The function *get\_FAMD()* offers a graphic
-visualisation of a Factorial Analysis of Mixed Data. This function is
-intended for datasets with mixed data only, like in our case example.
+
+#### Mixed variables
+
+The function *get\_FAMD()* offers a graphic visualisation of a Factorial
+Analysis of Mixed Data. This function is intended for datasets with
+mixed data only, like in our case example.
 
     ClustCheck::get_FAMD(cbank)
 
