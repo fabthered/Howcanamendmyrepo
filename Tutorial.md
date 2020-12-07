@@ -10,7 +10,7 @@ test the quality of the clustering.
 Installing the package
 ----------------------
 
-    #devtools::install_github("adrienPAVOINE/ClustCheck")
+    devtools::install_github("adrienPAVOINE/ClustCheck")
 
 Tutorial for package usage
 --------------------------
